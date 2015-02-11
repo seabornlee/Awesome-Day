@@ -1,0 +1,14 @@
+<div class="todolist not-done">
+  <h1>Todos</h1>
+  <add-todo></add-todo>
+  <br/>
+  <mark-all-as-done></mark-all-as-done>
+
+  <hr>
+  <ul id="sortable" class="list-unstyled">
+    <todo-item ng-repeat="todo in todos()" todo="todo"></todo-item>
+  </ul>
+  <div class="todo-footer">
+    <strong><span class="count-todos">{{ remainingCount() }}</span></strong> Items Left
+  </div>
+</div>

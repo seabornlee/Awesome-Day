@@ -1,0 +1,15 @@
+<li ng-class="{'ui-state-default': !todo.done}">
+  <div class="checkbox" ng-if="!todo.done">
+    <label>
+      <input type="checkbox" value="" ng-model="done" ng-change="complete()"/>{{ todo.name }}
+    </label>
+  </div>
+
+  <div ng-if="todo.done">
+  {{ todo.name }}
+  <button class="remove-item btn btn-default btn-xs pull-right" ng-click="remove()">
+    <span class="glyphicon glyphicon-remove"></span>
+  </button>
+  </div>
+</li>
+
