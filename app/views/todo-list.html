@@ -9,7 +9,7 @@
   </ul>
   <div class="todo-footer row">
     <div class="pull-left">
-      <strong><span class="count-todos">{{ remainingCount() }}</span></strong> Items Left
+      <remaining-count/>
     </div>
     <div class="pull-right">
       <timer countdown="countdown" max-time-unit="'hour'" interval="1000">{{hours}} : {{mminutes}} : {{sseconds}}</timer>
