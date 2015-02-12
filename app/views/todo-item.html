@@ -1,7 +1,7 @@
 <li ng-class="{'ui-state-default': !todo.done}">
-  <div class="checkbox" ng-if="!todo.done">
-    <label>
-      <input type="checkbox" value="" ng-model="done" ng-change="complete()"></input>
+  <div ng-if="!todo.done">
+    <input type="checkbox" id="cb" value="" ng-model="done" ng-change="complete()"></input>
+    <label for="cb">
       <a href="#" editable-text="todo.name" buttons="no" blur="submit">{{ todo.name }}</a>
     </label>
   </div>
