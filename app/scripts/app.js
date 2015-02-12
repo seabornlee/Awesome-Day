@@ -12,7 +12,8 @@ angular
   .module('angularDemoApp', [
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'ui.sortable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
