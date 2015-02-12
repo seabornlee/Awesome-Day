@@ -2,13 +2,21 @@ body{
   background-color:#EEEEEE;
 }
 
+h1 {
+  text-align:center;
+  background-color: #000;
+  margin: 5px 15px;
+  padding: 40px;
+  color: #fff;
+}
+
 .todolist{
   background-color:#FFF;
   padding:20px 20px 10px 20px;
   margin-top:30px;
 }
 
-.todolist h1{
+.todolist h2{
   margin:0;
   padding-bottom:20px;
   text-align:center;
