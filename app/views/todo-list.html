@@ -7,7 +7,12 @@
   <ul ui-sortable class="list-unstyled">
     <todo-item ng-repeat="todo in todos()" todo="todo"></todo-item>
   </ul>
-  <div class="todo-footer">
-    <strong><span class="count-todos">{{ remainingCount() }}</span></strong> Items Left
+  <div class="todo-footer row">
+    <div class="pull-left">
+      <strong><span class="count-todos">{{ remainingCount() }}</span></strong> Items Left
+    </div>
+    <div class="pull-right">
+      <timer countdown="countdown" max-time-unit="'hour'" interval="1000">{{hours}} : {{mminutes}} : {{sseconds}}</timer>
+    </div>
   </div>
 </div>

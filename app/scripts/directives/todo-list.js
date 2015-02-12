@@ -9,6 +9,10 @@ angular.module('angularDemoApp')
         $scope.todos = function() {
           return todoService.todoItems();
         };
+
+        var now = new Date();
+        var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+        $scope.countdown = (tomorrow - now) / 1000;
       }
     };
   });

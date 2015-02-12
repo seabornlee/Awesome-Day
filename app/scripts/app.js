@@ -14,7 +14,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ui.sortable',
-    'xeditable'
+    'xeditable',
+    'timer'
   ])
   .config(function ($routeProvider) {
     $routeProvider
