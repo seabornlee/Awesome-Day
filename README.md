@@ -10,3 +10,6 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## Thanks
+This application is inspired by [http://bootsnipp.com/snippets/featured/todo-example](http://bootsnipp.com/snippets/featured/todo-example).
