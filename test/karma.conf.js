@@ -32,6 +32,7 @@ module.exports = function(config) {
       'bower_components/Bootflat/bootflat/js/icheck.min.js',
       'bower_components/Bootflat/bootflat/js/jquery.fs.selecter.min.js',
       'bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js',
+      'bower_components/angular-local-storage/dist/angular-local-storage.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

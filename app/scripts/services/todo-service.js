@@ -1,11 +1,16 @@
 'use strict';
 
 angular.module('angularDemoApp')
-  .service('todoService', function () {
-    var todos = [];
+  .service('todoService', function (localStorageService) {
+    var todos = localStorageService.get('todos');
+
     return {
+      saveTodos: function() {
+        localStorageService.set('todos', todos);
+      },
       add: function(name) {
         todos.push({name: name, done: false});
+        this.saveTodos();
       },
       remainingCount: function() {
         return this.todoItems().length;
@@ -21,11 +26,13 @@ angular.module('angularDemoApp')
             todo.done = true;
           }
         });
+        this.saveTodos();
       },
       completeAll: function() {
         this.todoItems().forEach(function(todo) {
           todo.done = true;
         });
+        this.saveTodos();
       },
       doneItems: function() {
         return todos.filter(function(todo) {
@@ -36,11 +43,11 @@ angular.module('angularDemoApp')
         for (var i=0; i<todos.length; i++) {
           var todo = todos[i];
           if (todo.done && todo.name === name) {
-            console.log(todo)
             todos.splice(i, 1);
             break;
           }
         }
+        this.saveTodos();
       }
     };
   });

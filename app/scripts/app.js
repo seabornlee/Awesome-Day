@@ -15,7 +15,8 @@ angular
     'ngSanitize',
     'ui.sortable',
     'xeditable',
-    'timer'
+    'timer',
+    'LocalStorageModule'
   ])
   .config(function ($routeProvider) {
     $routeProvider

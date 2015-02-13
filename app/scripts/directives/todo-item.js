@@ -15,7 +15,10 @@ angular.module('angularDemoApp')
         };
         $scope.remove = function() {
           todoService.removeDoneItem($scope.todo.name);
-        }
+        };
+        $scope.updateTodo = function() {
+          todoService.saveTodos();
+        };
       }
     };
   });
