@@ -2,7 +2,7 @@
 
 angular.module('angularDemoApp')
   .service('todoService', function (localStorageService) {
-    var todos = localStorageService.get('todos');
+    var todos = localStorageService.get('todos') || [];
 
     return {
       saveTodos: function() {
