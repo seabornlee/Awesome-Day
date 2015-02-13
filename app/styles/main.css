@@ -2,12 +2,19 @@ body{
   background-color:#EEEEEE;
 }
 
-h1 {
+.header {
   text-align:center;
   background-color: #84BD00;
-  margin: 30px 15px;
+  margin: 30px 0;
   padding: 40px;
+}
+
+h1 {
   color: #FFF;
+}
+
+.add-todo {
+  height: 40px;
 }
 
 .todolist{
