@@ -11,6 +11,7 @@ body{
 
 h1 {
   color: #FFF;
+  margin-top: 0;
 }
 
 .add-todo {

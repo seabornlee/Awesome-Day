@@ -16,7 +16,8 @@ angular
     'ui.sortable',
     'xeditable',
     'timer',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'cfp.hotkeys'
   ])
   .config(function ($routeProvider) {
     $routeProvider
