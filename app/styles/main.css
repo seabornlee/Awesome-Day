@@ -4,12 +4,13 @@ body{
 
 .header {
   text-align:center;
-  background-color: #84BD00;
+  background-image: url(../images/bg.jpg);
+  background-position: 76% 42%;
   margin: 30px 0;
   padding: 40px;
 }
 
-h1 {
+h1, h3 {
   color: #FFF;
   margin-top: 0;
 }
