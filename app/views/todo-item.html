@@ -1,5 +1,5 @@
 <li ng-class="{'ui-state-default': !todo.done}">
-  <div class="checkbox" ng-if="!todo.done">
+  <div ng-if="!todo.done">
     <label>
       <input type="checkbox" value="" ng-model="done" ng-change="complete()"></input>
       <a href="#" editable-text="todo.name" buttons="no" blur="submit" onaftersave="updateTodo()">{{ todo.name }}</a>

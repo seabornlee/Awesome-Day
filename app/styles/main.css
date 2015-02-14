@@ -34,13 +34,25 @@ h1, h3 {
   border-radius:0;
 }
 
-li.ui-state-default{
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+  margin: 0 10px;
+}
+
+li {
   background:#fff;
   border:none;
   border-bottom:1px solid #ddd;
+  padding: 10px 0;
 }
 
-li.ui-state-default:last-child{
+li:last-child{
   border-bottom:none;
 }
 
@@ -51,13 +63,7 @@ li.ui-state-default:last-child{
 }
 
 #done-items li{
-  padding:10px 0;
-  border-bottom:1px solid #ddd;
   text-decoration:line-through;
-}
-
-#done-items li:last-child{
-  border-bottom:none;
 }
 
 #checkAll{
