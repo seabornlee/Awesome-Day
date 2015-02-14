@@ -9,7 +9,14 @@ angular.module('angularDemoApp')
         localStorageService.set('todos', todos);
       },
       add: function(name) {
-        todos.push({name: name, done: false});
+        todos.push({
+          name: name,
+          done: false,
+          complete: function() {
+            this.done = true;
+            this.completedAt = new Date();
+          }
+        });
         this.saveTodos();
       },
       remainingCount: function() {
@@ -23,14 +30,14 @@ angular.module('angularDemoApp')
       complete: function(name) {
         this.todoItems().forEach(function(todo) {
           if (todo.name === name) {
-            todo.done = true;
+            todo.complete();
           }
         });
         this.saveTodos();
       },
       completeAll: function() {
         this.todoItems().forEach(function(todo) {
-          todo.done = true;
+          todo.complete();
         });
         this.saveTodos();
       },
