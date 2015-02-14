@@ -4,6 +4,11 @@ angular.module('angularDemoApp')
   .service('todoService', function (localStorageService) {
     var todos = localStorageService.get('todos') || [];
 
+    var complete = function(todo) {
+      todo.done = true;
+      todo.completedAt = new Date();
+    };
+
     return {
       saveTodos: function() {
         localStorageService.set('todos', todos);
@@ -11,11 +16,7 @@ angular.module('angularDemoApp')
       add: function(name) {
         todos.push({
           name: name,
-          done: false,
-          complete: function() {
-            this.done = true;
-            this.completedAt = new Date();
-          }
+          done: false
         });
         this.saveTodos();
       },
@@ -30,14 +31,14 @@ angular.module('angularDemoApp')
       complete: function(name) {
         this.todoItems().forEach(function(todo) {
           if (todo.name === name) {
-            todo.complete();
+            complete(todo);
           }
         });
         this.saveTodos();
       },
       completeAll: function() {
         this.todoItems().forEach(function(todo) {
-          todo.complete();
+          complete(todo);
         });
         this.saveTodos();
       },
