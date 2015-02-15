@@ -7,9 +7,11 @@ angular.module('angularDemoApp')
       restrict: 'E',
       replace: true,
       scope: {
-        todo: '='
+        todo: '=',
+        order: '=',
+        isItemOrderVisible: '='
       },
-      controller: function($scope, todoService) {
+      controller: function($scope, todoService, hotkeys) {
         $scope.complete = function() {
           todoService.complete($scope.todo.name);
         };
@@ -19,6 +21,17 @@ angular.module('angularDemoApp')
         $scope.updateTodo = function() {
           todoService.saveTodos();
         };
+
+        if ($scope.order) {
+          hotkeys.add({
+            combo: 'ctrl+' + $scope.order,
+            action: 'keydown',
+            description: 'Complete todo item at position ' + $scope.order,
+            callback: function() {
+              $scope.complete();
+            }
+          });
+        }
       }
     };
   });

@@ -4,7 +4,7 @@
 
   <hr>
   <ul ui-sortable class="list-unstyled">
-    <todo-item ng-repeat="todo in todos()" todo="todo"></todo-item>
+    <todo-item ng-repeat="todo in todos()" todo="todo" order="$index + 1" is-item-order-visible="isItemOrderVisible()"/>
   </ul>
   <div class="todo-footer row">
     <div class="pull-left">
