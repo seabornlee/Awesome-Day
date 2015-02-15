@@ -30,6 +30,7 @@ angular.module('angularDemoApp')
         hotkeys.add({
           combo: 'ctrl',
           action: 'keydown',
+          allowIn: ['INPUT'],
           description: 'Show item order',
           callback: function() {
             $scope.showItemOrder();
@@ -42,6 +43,7 @@ angular.module('angularDemoApp')
         hotkeys.add({
           combo: 'ctrl',
           action: 'keyup',
+          allowIn: ['INPUT'],
           description: 'Hide item order',
           callback: function() {
             $scope.hideItemOrder();
