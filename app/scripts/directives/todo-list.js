@@ -14,9 +14,6 @@ angular.module('angularDemoApp')
       $scope.isItemOrderVisible = function() {
         return isItemOrderVisible;
       };
-      $scope.toggleItemOrderVisibility = function() {
-        isItemOrderVisible = !isItemOrderVisible;
-      };
 
       $scope.showItemOrder = function() {
         isItemOrderVisible = true;
