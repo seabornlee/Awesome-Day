@@ -32,6 +32,14 @@ angular.module('angularDemoApp')
       }
     });
 
+    hotkeys.add({
+      combo: 'ctrl+n',
+      description: 'Add new item',
+      callback: function() {
+        document.getElementById('todoName').focus();
+      }
+    });
+
     return {
       isItemOrderVisible: function() {
         return isItemOrderVisible;
