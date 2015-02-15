@@ -17,17 +17,16 @@ angular.module('angularDemoApp')
       action: 'keydown',
       description: 'Show/Hide item order',
       allowIn: ['INPUT'],
-      callback: function() {
-        var configuration = hotkeys.get(combo);
-        if (configuration.action === 'keydown') {
+      callback: function(event, hotkey) {
+        if (event.type === 'keydown') {
           isItemOrderVisible = true;
-          configuration.action = 'keyup';
+          hotkey.action = 'keyup';
         } else {
           isItemOrderVisible = false;
-          configuration.action = 'keydown';
+          hotkey.action = 'keydown';
         }
-        hotkeys.del(combo);
-        hotkeys.add(configuration);
+        hotkeys.del(hotkey.combo);
+        hotkeys.add(hotkey);
       }
     });
 
