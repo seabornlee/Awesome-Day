@@ -31,7 +31,6 @@ angular.module('angularDemoApp')
           combo: 'ctrl',
           action: 'keydown',
           allowIn: ['INPUT'],
-          description: 'Show item order',
           callback: function() {
             $scope.showItemOrder();
             bindHideItemOrderShortcut();
@@ -44,7 +43,6 @@ angular.module('angularDemoApp')
           combo: 'ctrl',
           action: 'keyup',
           allowIn: ['INPUT'],
-          description: 'Hide item order',
           callback: function() {
             $scope.hideItemOrder();
             bindShowItemOrderShortcut();
