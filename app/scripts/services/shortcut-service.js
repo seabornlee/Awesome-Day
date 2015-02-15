@@ -42,6 +42,9 @@ angular.module('angularDemoApp')
     return {
       isItemOrderVisible: function() {
         return isItemOrderVisible;
+      },
+      showCheatSheet: function() {
+        hotkeys.toggleCheatSheet();
       }
     };
   });

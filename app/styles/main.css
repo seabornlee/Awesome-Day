@@ -8,6 +8,7 @@ body{
   background-position: 76% 42%;
   margin: 30px 0;
   padding: 40px;
+  padding-top: 10px;
 }
 
 h1, h3 {
@@ -45,14 +46,14 @@ input[type=checkbox]
   margin: 0 10px;
 }
 
-li {
+.todolist li {
   background:#fff;
   border:none;
   border-bottom:1px solid #ddd;
   padding: 10px 0;
 }
 
-li:last-child{
+.todolist li:last-child{
   border-bottom:none;
 }
 

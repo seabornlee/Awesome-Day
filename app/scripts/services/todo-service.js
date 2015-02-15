@@ -56,6 +56,10 @@ angular.module('angularDemoApp')
           }
         }
         this.saveTodos();
+      },
+      clear: function() {
+        todos = [];
+        this.saveTodos();
       }
     };
   });
