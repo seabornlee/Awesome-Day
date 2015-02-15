@@ -15,7 +15,7 @@ angular.module('angularDemoApp')
     hotkeys.add({
       combo: combo,
       action: 'keydown',
-      description: 'Show item order',
+      description: 'Show/Hide item order',
       allowIn: ['INPUT'],
       callback: function() {
         isItemOrderVisible = true;
@@ -25,7 +25,6 @@ angular.module('angularDemoApp')
     hotkeys.add({
       combo: combo,
       action: 'keyup',
-      description: 'Hide item order',
       allowIn: ['INPUT'],
       callback: function() {
         isItemOrderVisible = false;
