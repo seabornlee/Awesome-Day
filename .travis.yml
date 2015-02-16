@@ -4,7 +4,9 @@ node_js:
 before_script:
   - 'npm install -g bower grunt-cli'
   - 'bower install'
+  - 'grunt serve &'
   - 'npm install -g protractor'
   - 'webdriver-manager update'
   - 'webdriver-manager start &'
-  - 'grunt serve &'
+script:
+  - 'protractor conf.js'
