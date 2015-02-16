@@ -1,9 +1,7 @@
-# Awesome Day
-
 ![Preview](http://ww2.sinaimg.cn/large/61412e43gw1epb592u2zdj20wa0hwn0s.jpg)
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.0.
+# Awesome Day
+`Awesome Day` is a simple todo app. You can start your every day by add todo items and complete them one by one.
 
 ## Features
 
@@ -16,7 +14,7 @@ You can use hotkeys anywhere, it doesn't care where the focus is.
 ![hotkeys](http://ww4.sinaimg.cn/large/61412e43gw1epb7201xapj20ds09jdgu.jpg)
 
 ### Inline edit
-Change todo item name by click it.
+Change todo item name by clicking it.
 
 ## Build & development
 
