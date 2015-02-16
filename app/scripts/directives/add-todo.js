@@ -7,8 +7,8 @@ angular.module('angularDemoApp')
     restrict: 'E',
     controller: function($scope, todoService) {
       $scope.handleKeypress = function(e) {
-        if (e.which == 13) {
-          if($scope.todoName != ''){
+        if (e.which === 13) {
+          if($scope.todoName !== ''){
             todoService.add($scope.todoName);
             $scope.todoName = '';
           }

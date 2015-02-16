@@ -11,7 +11,7 @@ angular.module('angularDemoApp')
         order: '=',
         isItemOrderVisible: '='
       },
-      controller: function($scope, todoService, hotkeys) {
+      controller: function($scope, todoService) {
         $scope.complete = function() {
           todoService.complete($scope.todo.name);
         };
