@@ -3,7 +3,9 @@
 # Awesome Day
 `Awesome Day` is a simple todo app. You can start your every day by add todo items and complete them one by one.
 
+[![Build Status](https://travis-ci.org/hkliya/Awesome-Day.svg?branch=master)](https://travis-ci.org/hkliya/Awesome-Day)
 [![Code Climate](https://codeclimate.com/github/hkliya/Awesome-Day/badges/gpa.svg)](https://codeclimate.com/github/hkliya/Awesome-Day)
+
 
 ## Features
 
