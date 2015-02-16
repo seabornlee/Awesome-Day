@@ -8,7 +8,7 @@
  * Service in the angularDemoApp.
  */
 angular.module('angularDemoApp')
-  .service('shortcutService', function (hotkeys) {
+  .service('shortcutService', function (hotkeys, todoService) {
     var isItemOrderVisible = false;
 
     var combo = 'ctrl';
@@ -39,12 +39,37 @@ angular.module('angularDemoApp')
       }
     });
 
+    var unregisterHotkeys = function(length) {
+      for (var i=1; i<=length; i++) {
+        hotkeys.del('ctrl+' + i);
+      }
+    };
+
+    var registerHotkeys = function(length) {
+      for (var i=1; i<=length; i++) {
+        hotkeys.add({
+          combo: 'ctrl+' + i,
+          action: 'keydown',
+          allowIn: ['INPUT'],
+          description: 'Complete todo item at position ' + i,
+          callback: function(event, hotkey) {
+            var index = parseInt(hotkey.combo[0].split('+')[1], 10) - 1;
+            todoService.completeTodoAt(index);
+          }
+        });
+      }
+    };
+
     return {
       isItemOrderVisible: function() {
         return isItemOrderVisible;
       },
       showCheatSheet: function() {
         hotkeys.toggleCheatSheet();
+      },
+      updateTodoListShortcuts: function(newLength, oldLength) {
+        unregisterHotkeys(oldLength);
+        registerHotkeys(newLength);
       }
     };
   });

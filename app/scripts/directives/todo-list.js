@@ -13,6 +13,10 @@ angular.module('angularDemoApp')
       $scope.isItemOrderVisible = function() {
         return shortcutService.isItemOrderVisible();
       };
+
+      $scope.$watch('todos().length', function(newLength, oldLength) {
+        shortcutService.updateTodoListShortcuts(newLength, oldLength);
+      });
     }
   };
 });

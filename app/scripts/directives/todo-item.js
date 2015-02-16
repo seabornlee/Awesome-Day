@@ -21,18 +21,6 @@ angular.module('angularDemoApp')
         $scope.updateTodo = function() {
           todoService.saveTodos();
         };
-
-        if ($scope.order) {
-          hotkeys.add({
-            combo: 'ctrl+' + $scope.order,
-            action: 'keydown',
-            allowIn: ['INPUT'],
-            description: 'Complete todo item at position ' + $scope.order,
-            callback: function() {
-              $scope.complete();
-            }
-          });
-        }
       }
     };
   });

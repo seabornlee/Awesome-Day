@@ -36,6 +36,10 @@ angular.module('angularDemoApp')
         });
         this.saveTodos();
       },
+      completeTodoAt: function(index) {
+        complete(this.todoItems()[index]);
+        this.saveTodos();
+      },
       completeAll: function() {
         this.todoItems().forEach(function(todo) {
           complete(todo);
