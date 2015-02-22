@@ -5,6 +5,7 @@
 
 [![Build Status](https://travis-ci.org/hkliya/Awesome-Day.svg?branch=master)](https://travis-ci.org/hkliya/Awesome-Day)
 [![Code Climate](https://codeclimate.com/github/hkliya/Awesome-Day/badges/gpa.svg)](https://codeclimate.com/github/hkliya/Awesome-Day)
+![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)
 
 
 ## Features
