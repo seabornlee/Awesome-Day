@@ -8,5 +8,6 @@ before_script:
   - sleep 5
   - 'webdriver-manager update'
   - 'webdriver-manager start &'
+  - sleep 5
 script:
   - 'protractor conf.js'
