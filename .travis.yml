@@ -2,11 +2,10 @@ language: node_js
 node_js:
   - '0.10'
 before_script:
-  - 'npm install -g bower grunt-cli'
+  - 'npm install -g bower grunt-cli protractor'
   - 'bower install'
-  - 'grunt serve &'
-  - 'npm install -g protractor'
+  - 'grunt serve'
   - 'webdriver-manager update'
-  - 'webdriver-manager start &'
+  - 'webdriver-manager start'
 script:
   - 'protractor conf.js'
