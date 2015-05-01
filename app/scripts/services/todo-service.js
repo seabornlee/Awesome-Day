@@ -47,9 +47,14 @@ angular.module('angularDemoApp')
         this.saveTodos();
       },
       doneItems: function() {
-        return todos.filter(function(todo) {
+        var doneItems = todos.filter(function(todo) {
           return todo.done;
         });
+
+        doneItems.forEach(function(todo) {
+          todo.completedAt = todo.completedAt.split('T')[0];
+        });
+        return doneItems;
       },
       removeDoneItem: function(name) {
         for (var i=0; i<todos.length; i++) {

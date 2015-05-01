@@ -37,6 +37,7 @@ module.exports = function(config) {
       'bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js',
       'bower_components/angular-local-storage/dist/angular-local-storage.js',
       'bower_components/angular-hotkeys/build/hotkeys.min.js',
+      'bower_components/angular-filter/dist/angular-filter.js',
       // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',

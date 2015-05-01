@@ -17,7 +17,8 @@ angular
     'xeditable',
     'timer',
     'LocalStorageModule',
-    'cfp.hotkeys'
+    'cfp.hotkeys',
+    'angular.filter'
   ])
   .config(function ($routeProvider) {
     $routeProvider
